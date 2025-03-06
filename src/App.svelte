@@ -6,12 +6,14 @@
   let placesPromise = $state()
   
   async function search(query) {
-    placesPromise = searchPlaces(query)
+    placesPromise = searchPlaces(query).then((data) => {
+      console.log(data)
+      return data
+    })
   }
 </script>
 
 <SearchForm {search}/>
-<LoadingSpinner />
 {#await placesPromise}
   <LoadingSpinner />
 {:then places } 
