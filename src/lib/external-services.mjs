@@ -15,6 +15,7 @@ export async function getIdentifications(placeId) {
     try {
         const result = await fetch(`${BASE_URL}/identifications?place_id=${placeId}`)
         const data = await result.json()
+        return data.results
     } catch (error) {
         console.error(error)
     }
