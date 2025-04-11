@@ -29,12 +29,13 @@
 <style>
   section {
     margin: 0 auto;
-    width: fit-content;
   }
   form {
     position: relative;
-    margin: 50px;
     width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
   }
   input {
     font-size: x-large;
@@ -46,7 +47,7 @@
     padding: 0;
     position: absolute;
     right: 4px;
-    top: 9px;
+    height: 24px;
     color: rgba(0, 0, 0, 0.4);
     cursor: pointer;
     :hover {

@@ -12,6 +12,7 @@
   let identificationsPromise = $state();
 
   async function search(query) {
+    identificationsPromise = null;
     placesPromise = searchPlaces(query).then((data) => {
       console.log(data);
       return data;
@@ -26,6 +27,8 @@
   }
 </script>
 
+<h1>iNaturalist</h1>
+
 <SearchForm {search} />
 {#await placesPromise}
   <LoadingSpinner />
@@ -37,3 +40,10 @@
     <IdentificationsList {identifications} />
   {/await}
 {/await}
+
+<style>
+  h1 {
+    text-align: center;
+    color: var(--primary-color);
+  }
+</style>

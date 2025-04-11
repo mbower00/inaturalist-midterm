@@ -18,6 +18,27 @@
   onMount(init);
 </script>
 
-{#each filteredIdentifications as identification}
-  <IdentificationCard {identification} />
-{/each}
+<div class="identifications-list">
+  {#each filteredIdentifications as identification}
+    <IdentificationCard {identification} />
+  {/each}
+</div>
+
+<style>
+  .identifications-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    /* padding: 0 18px; */
+    /* justify-items: center; */
+    max-width: 800px;
+    margin: 0 auto 32px auto;
+    width: min-content;
+  }
+
+  @media (min-width: 700px) {
+    .identifications-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

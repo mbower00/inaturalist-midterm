@@ -41,7 +41,6 @@
 <style>
   .photos-viewer {
     position: relative;
-    padding: 24px;
     width: fit-content;
     display: flex;
     align-items: center;
@@ -64,10 +63,10 @@
       }
     }
     .prev {
-      left: 0px;
+      left: -24px;
     }
     .next {
-      right: 0px;
+      right: -24px;
     }
   }
 </style>
