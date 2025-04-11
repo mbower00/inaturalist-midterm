@@ -11,10 +11,12 @@
     />
   {/if}
   <h3>{identification.observation.taxon.name}</h3>
+  <span class="observed">{identification.observation.observed_on}</span>
 </div>
 
 <style>
   .identification-card {
+    position: relative;
     display: flex;
     align-items: center;
     box-shadow: #aaa 0 2px 4px;
@@ -22,6 +24,13 @@
     padding: 18px 24px;
     gap: 24px;
     max-width: 226px;
+  }
+  .observed {
+    position: absolute;
+    font-size: xx-small;
+    bottom: 3px;
+    right: 6px;
+    color: #555;
   }
   /* using code from https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens */
   h3 {

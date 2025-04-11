@@ -1,0 +1,1 @@
+export let selectedPlace = $state({id: null})

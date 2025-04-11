@@ -1,12 +1,13 @@
 <script>
-  let { place, selectPlace, isActive } = $props();
+  import { selectedPlace } from "./state.svelte";
+  let { place, selectPlace } = $props();
 </script>
 
 <button
   onclick={() => {
     selectPlace(place.id);
   }}
-  class={isActive ? "active" : ""}
+  class={selectedPlace.id === place.id ? "active" : ""}
 >
   {place.name}
 </button>

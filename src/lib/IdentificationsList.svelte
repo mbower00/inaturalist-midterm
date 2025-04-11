@@ -29,8 +29,6 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 25px;
-    /* padding: 0 18px; */
-    /* justify-items: center; */
     max-width: 800px;
     margin: 0 auto 32px auto;
     width: min-content;

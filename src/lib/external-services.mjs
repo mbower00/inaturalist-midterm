@@ -11,9 +11,9 @@ export async function searchPlaces(query) {
     }
 }
 
-export async function getIdentifications(placeId) {
+export async function getIdentifications(placeId, afterDate, beforeDate) {
     try {
-        const result = await fetch(`${BASE_URL}/identifications?place_id=${placeId}`)
+        const result = await fetch(`${BASE_URL}/identifications?place_id=${placeId}&observed_d1=${afterDate}&observed_d2=${beforeDate}`)
         const data = await result.json()
         return data.results
     } catch (error) {
